@@ -11,8 +11,18 @@ namespace myApp
 
             Console.WriteLine("What's your name?");
 
+            string pictureName = Questions();
+            DrawPicture(pictureName);
+
+            //Readline and exit
+            Console.ReadLine();
+
+        }
+
+        private static string Questions()
+        {
             // C# Ex for text/string variable:
-            string  firstName;
+            string firstName;
             //firstName = "Adrian";
             firstName = Console.ReadLine();
 
@@ -36,21 +46,15 @@ namespace myApp
 
             // C# Ex for number variable:
             //int myAge;
-           // myAge = 0;
+            // myAge = 0;
             //Cast or Convert from text to number
             //myAge = Convert.ToInt32(numberAsText);
 
-            Console.WriteLine("Ok,"+ firstName + " Your age is... " + yourAgeAsText );
+            Console.WriteLine("Ok," + firstName + " Your age is... " + yourAgeAsText);
 
             Console.WriteLine("What do you want me to draw?");
             string pictureName = Console.ReadLine();
-
-            
-            DrawPicture(pictureName);
-
-            //Readline and exit
-            Console.ReadLine();
-
+            return pictureName;
         }
 
         static void DrawPicture(string picturetype)
